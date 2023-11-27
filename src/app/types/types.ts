@@ -1,6 +1,6 @@
 export type CommonAttributes = {
   id: string;
-  type: string;
+  type?: string;
 };
 
 export type ButtonT = CommonAttributes & {
