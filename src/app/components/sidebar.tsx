@@ -11,11 +11,13 @@ export default function Sidebar() {
   
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e?.target?.files?.item(0);
-    const text = await file?.text();
-    await dispatch({
-      type: "loaded",
-      data: text ? JSON.parse(text) : {},
-    });
+    if (file) {
+        const text = await file?.text();
+        await dispatch({
+          type: "loaded",
+          data: text ? JSON.parse(text) : {},
+        });
+    }
   }
 
   return (
