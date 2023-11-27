@@ -6,6 +6,4 @@ body {
   display: flex;
   height: 100dvh;
   width: 100dvw;
-  justify-items: center;
-  /* background-color: grey; */
 }

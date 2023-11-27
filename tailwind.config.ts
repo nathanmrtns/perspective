@@ -7,12 +7,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    colors: {
+      "primary-100":"#019b98",
+      "primary-200":"#55ccc9",
+      "primary-300":"#DCEFE8",
+      "secondary-100":"#dd0025",
+      "secondary-200":"#ffbfab",
+      "white": "#ffffff",
+      "primary-dark": "#324B4A"
     },
     spacing: {
       px: '1px',
@@ -33,23 +35,7 @@ const config: Config = {
       10: '2.5rem',
       11: '2.75rem',
       12: '3rem',
-      14: '3.5rem',
-      16: '4rem',
-      20: '5rem',
-      24: '6rem',
-      28: '7rem',
-      32: '8rem',
-      36: '9rem',
-      40: '10rem',
-      44: '11rem',
-      48: '12rem',
-      52: '13rem',
-      56: '14rem',
-      60: '15rem',
-      64: '16rem',
-      72: '18rem',
-      80: '20rem',
-      96: '24rem',
+      20: '325px'
     }
   },
   safelist: [{
