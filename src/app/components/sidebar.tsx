@@ -21,7 +21,7 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="w-20 shrink-0 h-auto border-r-[3px] border-primary-dark p-4">
+    <div className="w-20 shrink-0 h-auto border-r-[1px] shadow-lg border-primary-100 p-4">
       <div className="flex shrink items-center mb-5">
         <Image
           src={perspectiveLogo}
@@ -36,7 +36,7 @@ export default function Sidebar() {
       </div>
       <input
         id="file"
-        className="block w-full mb-6 text-sm text-slate-500
+        className="block text-sm text-slate-500
                     file:mr-4 file:py-2 file:px-4
                     file:rounded-full file:border-0
                     file:text-sm file:font-semibold
@@ -46,12 +46,8 @@ export default function Sidebar() {
         accept="json"
         onChange={handleChange}
       />
-
-      {state && (
-        <>
-          <PagesList pages={state?.pages} />
-        </>
-      )}
+      <div className="bg-primary-300 h-px my-6"></div>
+      {state && <PagesList pages={state?.pages} />}
     </div>
   );
 }

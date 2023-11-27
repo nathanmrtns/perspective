@@ -11,7 +11,7 @@ export default function ImageBlock({ id, src }: ImageT) {
       alt={""}
       width="375"
       height="225"
-      placeholder={`data:image/svg+xml;base64,${base64Shimmer(475, 475)}`}
+      placeholder={`data:image/svg+xml;base64,${base64Shimmer(375, 225)}`}
     />
   );
 }

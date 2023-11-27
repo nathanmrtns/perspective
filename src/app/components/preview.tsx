@@ -13,7 +13,7 @@ export default function Preview() {
       {state ? (
         <div
           className="flex flex-col w-[375px] min-h-[600px] items-center
-         py-5 px-5 gap-y-5 overflow-auto rounded-md border bg-white"
+         py-5 px-5 gap-y-5 overflow-auto rounded-md shadow-lg bg-white"
           style={{
             backgroundColor: state.bgColor,
           }}
