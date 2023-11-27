@@ -1,3 +1,4 @@
+
 export type CommonAttributes = {
     id: string,
     type: string,
@@ -28,4 +29,26 @@ export type TextT = CommonAttributes & {
 export type ImageT = CommonAttributes & {
     id: string,
     src: string
+}
+
+export type Page = {
+    id: string;
+    blocks: Array<ButtonT | TextT | ImageT | ListT>
+}
+
+type Data = {
+    name: string;
+    bgColor: string;
+    pages: Page[];
+}
+
+export type FileContextAction = {
+    type: 'loaded' | 'selectPage';
+    data?: Data;
+    pageId?: string 
+}
+
+export type FileReducerState = {
+    state?: Data;
+    selectedPageId?: string
 }

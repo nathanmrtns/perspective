@@ -1,4 +1,4 @@
-import { ButtonT, ListT, TextT, ImageT } from "./types";
+import { ButtonT, ListT, TextT, ImageT } from "@/app/types/types";
 import Button from "./button";
 import Text from "./text";
 import Image from "./image";
@@ -9,14 +9,14 @@ export default function BlockRenderer({blocks}: any) {
     return blocks.map((block: any) => {
         switch (block.type){ 
             case 'button':
-                return <Button {...(block as ButtonT)}/>
+                return <Button key={block.id} {...(block as ButtonT)}/>
             case 'text':
-                return <Text {...(block as TextT)}/>
+                return <Text key={block.id} {...(block as TextT)}/>
             case 'image':
                 // eslint-disable-next-line jsx-a11y/alt-text
-                return <Image {...(block as ImageT)}/>
+                return <Image key={block.id} {...(block as ImageT)}/>
             case 'list':
-                return <List {...((block as unknown) as ListT)}/>
+                return <List key={block.id} {...((block as unknown) as ListT)}/>
             }
             return null;
     });

@@ -1,4 +1,4 @@
-import { ButtonT } from "./types"
+import { ButtonT } from "@/app/types/types";
 
 export default function Button({id, text, color, bgColor}: ButtonT) {
     return <button id={id} className="w-full p-2 rounded" style={{

@@ -1,4 +1,4 @@
-import {TextT} from './types';
+import {TextT} from "@/app/types/types";
 
 export default function Text({id, text, color, align}: TextT) {
     const textAlignment = {
