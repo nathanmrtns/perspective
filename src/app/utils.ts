@@ -10,11 +10,11 @@ const shimmer = (w: number, h: number) => `
     <rect width="${w}" height="${h}" fill="#e6e6e6" />
     <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
     <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-    </svg>`
+    </svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str);
 
-export const base64Shimmer = (w:number, h: number) => toBase64(shimmer(w, h));
+export const base64Shimmer = (w: number, h: number) => toBase64(shimmer(w, h));

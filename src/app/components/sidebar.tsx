@@ -1,6 +1,6 @@
 "use client";
 
-import { useFileContext,useFileDispatcher } from "@/app/context";
+import { useFileContext, useFileDispatcher } from "@/app/context";
 import PagesList from "./pageList";
 import Image from "next/image";
 import perspectiveLogo from "@/app/assets/perspective_logo.png";
@@ -8,15 +8,15 @@ import perspectiveLogo from "@/app/assets/perspective_logo.png";
 export default function Sidebar() {
   const { state } = useFileContext();
   const dispatch = useFileDispatcher();
-  
+
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e?.target?.files?.item(0);
     if (file) {
-        const text = await file?.text();
-        await dispatch({
-          type: "loaded",
-          data: text ? JSON.parse(text) : {},
-        });
+      const text = await file?.text();
+      await dispatch({
+        type: "loaded",
+        data: text ? JSON.parse(text) : {},
+      });
     }
   }
 

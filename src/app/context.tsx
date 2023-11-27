@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 };
 
 const FileContext = createContext<FileReducerState>(INITIAL_STATE);
-const FileDispatcherContext = createContext<any>({dispatch: () => undefined});
+const FileDispatcherContext = createContext<any>({ dispatch: () => undefined });
 
 export function useFileContext() {
   return useContext(FileContext);
@@ -38,10 +38,9 @@ function fileReducer(state: FileReducerState, action: FileContextAction): any {
 }
 
 export function FileProvider({ children }: { children: React.ReactNode }) {
-  const [context, dispatch] = useReducer<Reducer<FileReducerState, FileContextAction>>(
-    fileReducer,
-    { state: undefined, selectedPageId: undefined }
-  );
+  const [context, dispatch] = useReducer<
+    Reducer<FileReducerState, FileContextAction>
+  >(fileReducer, INITIAL_STATE);
 
   return (
     <FileContext.Provider

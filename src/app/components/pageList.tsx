@@ -1,13 +1,12 @@
 import { useFileContext, useFileDispatcher } from "@/app/context";
-import { Page
- } from "../types/types";
+import { Page } from "../types/types";
 
 type PageList = {
-    pages: Page[]
-}
+  pages: Page[];
+};
 
 export default function PagesList({ pages }: PageList) {
-  const { selectedPageId} = useFileContext();
+  const { selectedPageId } = useFileContext();
   const dispatch = useFileDispatcher();
 
   const handleSelectPage = (pageId: string) => async () => {
@@ -22,7 +21,7 @@ export default function PagesList({ pages }: PageList) {
   const btnClass = {
     active: "bg-primary-100 hover:font-bold p-2 my-2 w-full text-white rounded",
     inactive:
-      "bg-primary-300 text-primary-dark p-2 my-2 w-full rounded  hover:bg-primary-dark hover:text-white",
+      "bg-primary-300 text-primary-dark p-2 my-2 w-full rounded hover:bg-primary-dark hover:text-white",
   };
 
   return (

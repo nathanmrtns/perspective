@@ -22,7 +22,7 @@ export default function Preview() {
         </div>
       ) : (
         <h1 className="text-xl font-bold text-primary-dark">
-            Select a template file for preview
+          Select a template file for preview
         </h1>
       )}
     </div>
